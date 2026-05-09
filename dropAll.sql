@@ -1,0 +1,10 @@
+-- # Delete Tables
+DROP TABLE IF EXISTS emp_emails;
+DROP TABLE IF EXISTS own_emails;
+DROP TABLE IF EXISTS cli_emails;
+DROP TABLE IF EXISTS viewing;
+DROP TABLE IF EXISTS lease;
+DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS owner;
+DROP TABLE IF EXISTS client;
+DROP TABLE IF EXISTS property;
