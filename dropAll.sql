@@ -2,6 +2,9 @@
 DROP TRIGGER IF EXISTS trg_limit_associate_properties;
 DROP TRIGGER IF EXISTS trg_limit_associate_properties_update;
 DROP TRIGGER IF EXISTS trg_update_adv_status;
+DROP TRIGGER IF EXISTS enforce_min_lease_length;
+DROP TRIGGER IF EXISTS trg_max_lease_length;
+DROP TRIGGER IF EXISTS set_lease_owner;
 
 -- # Delete Tables
 SET FOREIGN_KEY_CHECKS = 0;

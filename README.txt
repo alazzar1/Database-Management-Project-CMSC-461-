@@ -4,6 +4,24 @@ A relational database schema for managing a real estate agency's operations, inc
 
 ---
 
+## Quick Start
+
+This project includes three Jupyter notebooks to help you initialize and manage the database:
+
+1. **initialization.ipynb** - Creates the database and schema
+2. **Queries_n_Reports.ipynb** - Run queries and generate reports
+3. **activities.ipynb** - Perform database management operations
+
+### Setup Workflow
+
+1. Run `initialization.ipynb` to create the database and tables
+2. Use `Queries_n_Reports.ipynb` for analysis and reporting
+3. Use `activities.ipynb` for managing properties, clients, and viewings
+
+Each notebook contains guide sections with detailed instructions on how to use it.
+
+---
+
 ## Tables
 
 ### `employee`
@@ -66,6 +84,48 @@ All sample data uses addresses in the Baltimore/Maryland metro area.
 
 ---
 
+## Notebooks
+
+### initialization.ipynb
+Initializes the Pluto Realty database by:
+- Creating the `pluto_realty` database if it doesn't exist
+- Creating all required tables with proper schemas and constraints
+- Setting up the connection for use in other notebooks
+
+**Prerequisites**: MySQL server must be running locally with root access.
+
+### Queries_n_Reports.ipynb
+Contains SQL queries for analysis and reporting:
+- **Basic Queries**: Retrieve client and owner information
+- **Advanced Queries**: Property viewings by date, most popular properties, rent analysis, client-property relationships, employee performance metrics, and financial reports
+- Includes helper functions for date input validation
+
+**Usage**: Select a query cell and run it. Some queries will prompt for user input (dates, IDs).
+
+### activities.ipynb
+Interactive functions for database management:
+- **Edit Property**: Modify property details
+- **Add New Client**: Create new client records
+- **Schedule Viewing**: Book property viewings
+- **Delete Property**: Remove properties and associated records
+- **Transfer Owner Partner**: Reassign owners to new employee partners
+
+**Usage**: Run the function definition cells first, then execute the activity cells and follow the prompts.
+
+---
+
+## Files
+
+- **initialization.ipynb** - Database initialization notebook
+- **Queries_n_Reports.ipynb** - Queries and reporting notebook
+- **activities.ipynb** - Database management operations notebook
+- **createAll.sql** - SQL script to create all tables (used by initialization.ipynb)
+- **dropAll.sql** - SQL script to drop all tables (for cleanup)
+- **loadAll.sql** - SQL script to populate the database with sample data
+- **README.txt** - This file
+
+---
+
 ## Notes
 
 - `property.id` values are AUTOINCREMENT and assigned in insertion order: residential properties get IDs 1–6, commercial 7–12, industrial 13–18.
@@ -80,4 +140,5 @@ All sample data uses addresses in the Baltimore/Maryland metro area.
 
 ## AI Disclosure
 
-AI was used in the generation of random, diverse test data. The AI data was checked and cleaned for errors before insertion into the database.
+AI was used in the generation of random, diverse test data. The AI data was checked and cleaned for errors before insertion into the database. 
+AI was also used in the formatting of markdown cells within the notebooks to provide a more visually pleasing guide.
